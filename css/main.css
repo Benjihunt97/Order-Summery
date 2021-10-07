@@ -1,0 +1,197 @@
+/*==========
+    Custom Fonts
+============*/
+@font-face {
+  font-family: myFont;
+  src: url(../red_hat_display/static/RedHatDisplay-Medium.ttf);
+}
+
+/*================
+    Custom Styles
+==================*/
+/*================
+    Prefix styles
+==================*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: myFont;
+  font-size: 0.875rem;
+  background: #e0e8ff;
+  background: url("../order-summary-component-main/images/pattern-background-mobile.svg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.container {
+  max-width: 90%;
+  border-radius: 20px;
+  background: #fff;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*==========
+    Heading
+============*/
+header {
+  height: 180px;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+}
+
+/*==========
+    Main
+============*/
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1.4rem;
+  text-align: center;
+}
+
+main div {
+  width: 100%;
+}
+
+main .hero_title {
+  margin-bottom: 1.2rem;
+  font-weight: 900;
+  color: #1f2f56;
+}
+
+main .hero_info {
+  color: #7280a7;
+  font-weight: 500;
+  width: 87%;
+  margin: auto;
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background: #f5f7ff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.plan .plan_info {
+  margin-left: 0.8rem;
+}
+
+.plan .plan_price {
+  color: #7280a7;
+}
+
+.plan a {
+  color: #3829e0;
+  font-weight: 700;
+}
+
+.plan a:hover {
+  color: rgba(56, 41, 224, 0.7);
+  text-decoration: none;
+}
+
+/*==========
+    Payment buttons
+============*/
+.btn {
+  display: block;
+  width: 100%;
+  padding: 1.2rem 0;
+  font-size: 0.875rem;
+  border: 0;
+  outline: 0;
+  font-weight: 700;
+  border-radius: 9px;
+}
+
+.btn:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.btn-payment {
+  background: #3829e0;
+  box-shadow: 0 30px 10px #f5f7ff;
+  color: #fff;
+}
+
+.btn-payment:hover {
+  background: rgba(56, 41, 224, 0.7);
+}
+
+.btn-cancel {
+  background: transparent;
+  color: #7280a7;
+}
+
+.btn-cancel:hover {
+  color: #1f2f56;
+}
+
+@media screen and (max-width: 90rem) {
+  .container {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  body {
+    background: url("../order-summary-component-main/images/pattern-background-desktop.svg");
+    background-position: center center;
+    background-size: cover;
+  }
+  .container {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 23.4375rem) {
+  .container {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

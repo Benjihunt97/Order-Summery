@@ -1,0 +1,221 @@
+/*==========
+    Custom Fonts
+============*/
+@font-face {
+	font-family: myFont;
+	src: url(../red_hat_display/static/RedHatDisplay-Medium.ttf);
+}
+
+/*================
+    Custom Styles
+==================*/
+// screen sizes
+$mobile-screen: 23.4375rem;
+$desktop-screen: 90rem;
+
+// Primary colors
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+// Nerutral colors
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+// Typeography
+$body-copy: 0.875rem;
+
+$fw-light: 500;
+$fw-medium: 700;
+$fw-heavy: 900;
+
+/*================
+    Prefix styles
+==================*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	font-family: myFont;
+	font-size: $body-copy;
+	background: $pale-blue;
+	background: url("../order-summary-component-main/images/pattern-background-mobile.svg");
+	background-position: center center;
+	background-size: cover;
+}
+
+.container {
+	max-width: 90%;
+	border-radius: 20px;
+	background: #fff;
+}
+
+button,
+a {
+	cursor: pointer;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/*==========
+    Heading
+============*/
+header {
+	height: 180px;
+
+	& img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 20px 20px 0 0;
+	}
+}
+
+/*==========
+    Main
+============*/
+
+// Information summery
+main {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	padding: 1.4rem;
+
+	text-align: center;
+
+	& div {
+		width: 100%;
+	}
+
+	& .hero_title {
+		margin-bottom: 1.2rem;
+		font-weight: $fw-heavy;
+		color: $dark-blue;
+	}
+
+	& .hero_info {
+		color: $desaturated-blue;
+		font-weight: $fw-light;
+		width: 87%;
+		margin: auto;
+	}
+}
+
+// Plan price
+.plan {
+	display: flex;
+	align-items: center;
+	text-align: left;
+	background: $very-pale-blue;
+	padding: 1rem;
+	border-radius: 10px;
+	margin: 1.5rem 0;
+	font-weight: $fw-light;
+	font-size: 10px;
+
+	& .plan_info {
+		margin-left: 0.8rem;
+	}
+
+	& .plan_price {
+		color: $desaturated-blue;
+	}
+
+	& a {
+		color: $bright-blue;
+		font-weight: $fw-medium;
+
+		&:hover {
+			color: rgba($color: $bright-blue, $alpha: 0.7);
+			text-decoration: none;
+		}
+	}
+}
+
+/*==========
+    Payment buttons
+============*/
+
+.btn {
+	display: block;
+	width: 100%;
+	padding: 1.2rem 0;
+	font-size: $body-copy;
+	border: 0;
+	outline: 0;
+	font-weight: $fw-medium;
+	border-radius: 9px;
+
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+}
+
+.btn-payment {
+	background: $bright-blue;
+	box-shadow: 0 30px 10px $very-pale-blue;
+	color: #fff;
+
+	&:hover {
+		background: rgba($color: $bright-blue, $alpha: 0.7);
+	}
+}
+
+.btn-cancel {
+	background: transparent;
+	color: $desaturated-blue;
+
+	&:hover {
+		color: $dark-blue;
+	}
+}
+
+@media screen and (max-width: $desktop-screen) {
+	.container {
+		width: 25%;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	body {
+		background: url("../order-summary-component-main/images/pattern-background-desktop.svg");
+		background-position: center center;
+		background-size: cover;
+	}
+	.container {
+		width: 25%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.container {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.container {
+		width: 35%;
+	}
+}
+
+@media screen and (max-width: $mobile-screen) {
+	.container {
+		width: 90%;
+	}
+}
